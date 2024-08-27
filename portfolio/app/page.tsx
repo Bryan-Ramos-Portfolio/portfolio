@@ -4,12 +4,14 @@ export default function Home() {
     <div>
       <div className='flex gap-5 justify-center'>
         <h1>Bryan Ramos</h1>
-        <div>
+        <div className="">
           <Image
-            src="/profile.jpg"
+            src="/portrait.jpg"
             alt="Profile Picture"
-            width={200}
-            height={200}
+            width={400}
+            height={400}
+            quality={100}
+            className="rounded-md"
           />
         </div>
       </div>
