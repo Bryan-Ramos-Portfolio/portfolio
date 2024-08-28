@@ -30,8 +30,7 @@ export default function Home() {
             <span className="font-medium">
               <a href="https://www.marcylabschool.org/">The Marcy Lab School</a>
             </span>
-            , a fellowship program focused on software engineering. With a solid
-            foundation in software engineering,
+            , a fellowship program focused on software engineering.
           </p>
           <p className=" font-light mt-5">
             My expertise spans <span className="font-semibold">Front-end</span> and <span className="font-semibold">Back-end</span> development, as well as 
@@ -46,12 +45,15 @@ export default function Home() {
           </p>
 
           <div className="flex gap-4 mt-5">
-            <button className=" bg-gray-900 px-10 py-2 text-white rounded hover:opacity-90 duration-200">
+            <a target='_blank' href='https://www.linkedin.com/in/bryan-ramos-174826279/' ><button className=" flex gap-2 bg-gray-900 px-5 py-2 text-white rounded hover:opacity-90 duration-200">
               LinkedIn
-            </button>
-            <button className="bg-white border px-10 py-2 text-gray-500  rounded hover:opacity-90 duration-200">
+              <Image  alt='linkedIn logo' src='/linkedin.png' width={25} height={20} />
+            </button></a>
+            <a target='_blank' href='https://github.com/bryanpow'><button className=" flex gap-2 bg-white border px-5 py-2 text-gray-500  rounded hover:opacity-90 duration-200">
               GitHub
-            </button>
+              <Image  alt='linkedIn logo' src='/github.png' width={25} height={20} />
+            </button></a>
+            
           </div>
         </div>
 
