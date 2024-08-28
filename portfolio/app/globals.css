@@ -1,9 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .text-shadow-custom {
+     /* Base shadow and text color */
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2); /* Custom text shadow */
+  }
+}
 body {
   font-family: "Roboto";
   color: rgb(31, 31, 31)
+}
+.text-gradient {
+  background: radial-gradient(ellipse, #b0b0b0, #171717);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.script {
+  font-family: "Herr Von Muellerhoff";
+}
+
+.shade {
+  background: linear-gradient(to bottom, #ffffff, #ffffff, #949393);
+
 }
