@@ -73,11 +73,16 @@ export default function Home() {
           />
         </div>
       </div>
-
+      <div className=" m-auto  pt-10 h-screen w-screen ">
+        <div className="w-[75%] m-auto">
+        <h1 className="text-[2rem]">Projects</h1>
+        </div>
+        
+      </div>
       </div>
       
 
-      <div className=" m-auto h-screen w-screen bg-gray-900"></div>
+      
     </div>
   );
 }
