@@ -18,7 +18,7 @@ function Project({ demo, logo, width, tech }: ProjectProps) {
         />
         <div className='flex    pt-6'>
           {tech.map((item, index) => (
-            <p key={index} className=" border-[1px] border-gray-200 px-2 py-1 font-medium bg-white text-gray-300">
+            <p key={index} className=" border-[1px] border-gray-200 px-2  text-[0.9rem] font-medium bg-white   text-gray-300">
               {item.toUpperCase()}
             </p>
           ))}
