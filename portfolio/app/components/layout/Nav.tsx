@@ -1,23 +1,39 @@
+import Image from "next/image";
 
-const links = [{ name: 'Home', href: '/' }, {name: 'Projects', href: '/#projects'}, { name: 'Contact', href: '/contact' }, {name: 'Blogs', href: '/blogs'}]
+type Media = {
+  src: string;
+  href: string;
+};
+
 function Nav() {
+  const media: Media[] = [
+    { src: "/github.png", href: "https://github.com/bryanpow" },
+    { src: "/linkedin.png", href: "https://www.linkedin.com/in/bryan-ramos-174826279/" },
+    { src: "/email.png", href: "mailto:ramosbusiness544@gmail.com" },
+  ];
+
   return (
-    <div className=' flex border-b justify-end  gap-3 mb-5 p-3  r m-auto'>
-        <div className='w-[75%] flex justify-center m-auto'>
-        <div className='  text-[2rem] script w-full '>Bryan Ramos</div>
-        <div className=" flex gap-3 border rounded-lg p-1 px-1 " >
-        
-        {
-                links.map((link, index) => (
-                    <a key={index} href={link.href} className=' p-2 px-3 hover:bg-zinc-900 hover:text-white rounded-lg transition-all duration-200 '>{link.name}</a>
-                ))
-            }
+    <nav className="absolute z-[1000] top-0 left-0 w-full pt-10">
+      <div className="w-[80%] flex justify-between m-auto">
+        <Image
+          quality={100}
+          src="/portfolio_logo.png"
+          width={65}
+          height={65}
+          alt="logo"
+        />
+
+        <div className="flex gap-5">
+          {media.map((item, index) => (
+            <a target="_blank" href={item.href} key={index}>
+              <Image src={item.src} quality={100} width={25} height={30} alt="media" />
+            </a>
+          ))}
         </div>
-        </div>
-       
-            
-    </div>
-  )
+      </div>
+    </nav>
+  );
 }
 
-export default Nav
+export default Nav;
+
