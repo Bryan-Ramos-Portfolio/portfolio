@@ -3,7 +3,7 @@ function Cycle({imgs} : {imgs: string[]}) {
     
 
   return (
-    <div className="relative overflow-hidden h-24">
+    <div className="relative  z-[5] overflow-hidden h-24">
       <Marquee gradient={true} gradientColor="rgba(255, 255, 255, 0.03)" gradientWidth={50}  pauseOnHover={true} className="">
         {[...imgs, ...imgs].map((img, index) => (
           <div key={index} className="flex-shrink-0 mx-4">

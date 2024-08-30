@@ -6,7 +6,7 @@ function Hero() {
     <div className="border-b w-[80%] m-auto">
                 <div className="flex   m-auto  pb-[4rem] justify-between">
       <div className="pt-[10rem] w-[60%]">
-        <h1>Nice to meet you!</h1>
+        <h1>Nice to meet you.</h1>
         <h1>
           Im{" "}
           <span className="border-b-[0.5rem]  border-[#CCF9FF]  ">

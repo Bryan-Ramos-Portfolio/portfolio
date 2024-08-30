@@ -83,6 +83,3 @@ p {
     transition: background 0.3s ease;
 }
 
-.blue-grad:hover {
-   background: linear-gradient(to top, #f6fbfc, #CCF9FF, #CCF9FF);
-}
