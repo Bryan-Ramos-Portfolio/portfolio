@@ -7,7 +7,7 @@ interface ProjectProps {
 
 function Project({ demo, logo, width, tech }: ProjectProps) {
   return (
-    <div className="w-[40rem] hover:bg-gray-100 duration-300 mb-10 overflow-hidden h-[30rem] bg-[#CCF9FF] group">
+    <div className="w-[40rem] hover:bg-gray-100 duration-300 mb-10 overflow-hidden h-[30rem] blue-grad group">
       <div className="pl-10">
       
         <img
@@ -18,7 +18,7 @@ function Project({ demo, logo, width, tech }: ProjectProps) {
         />
         <div className='flex    pt-6'>
           {tech.map((item, index) => (
-            <p key={index} className=" border-r border-gray-200 px-2 font-medium bg-white text-gray-400">
+            <p key={index} className=" border-[1px] border-gray-200 px-2 py-1 font-medium bg-white text-gray-300">
               {item.toUpperCase()}
             </p>
           ))}
