@@ -38,3 +38,42 @@ p {
 .script {
   font-family: "Herr Von Muellerhoff";
 }
+
+@keyframes moveWithin {
+  0% {
+    transform: scale(1.2) translate(0, 0);
+  }
+  25% {
+    transform: scale(1.2) translate(-10px, 10px);
+  }
+  50% {
+    transform: scale(1.2) translate(10px, -10px);
+  }
+  75% {
+    transform: scale(1.2) translate(10px, 10px);
+  }
+  100% {
+    transform: scale(1.2) translate(0, 0);
+  }
+}
+
+.animate-moveWithin {
+  animation: moveWithin 12s ease-in-out infinite;
+}
+
+
+@keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-marquee {
+    display: flex;
+    width: calc(200%); /* Adjust the width to double the length of the content */
+    animation: marquee 20s linear infinite;
+  }
+  
