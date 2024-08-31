@@ -8,9 +8,12 @@ interface ProjectProps {
   logo: string;
   width: number;
   tech: string[];
+  title: string;
+  body: string[];
+  techimgs: string[];
 }
 
-function Project({ demo, logo, width, tech }: ProjectProps) {
+function Project({ demo, logo, width, tech, title, body, techimgs }: ProjectProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const targetRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ top: 0, left: 0 });
@@ -39,7 +42,7 @@ function Project({ demo, logo, width, tech }: ProjectProps) {
       setIsTransitioning(true);
       const timeoutId = setTimeout(() => {
         setIsTransitioning(false);
-      }, 400); // Adjust the delay to match your animation duration
+      }, 500); // Adjust the delay to match your animation duration
   
       return () => clearTimeout(timeoutId); // Cleanup timeout if component unmounts or state changes
     } else {
@@ -59,6 +62,9 @@ function Project({ demo, logo, width, tech }: ProjectProps) {
         targetRef={targetRef}
       />
       <ProjectActive
+        title={title}
+        body={body}
+        techimgs={techimgs}
         demo={demo}
         logo={logo}
         width={width}

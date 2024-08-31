@@ -12,11 +12,23 @@ interface ProjectInactiveProps {
 }
 
 function ProjectInactive({ demo, logo, width, tech, onExpand, isExpanded, targetRef }: ProjectInactiveProps) {
+    const [clear, setClear] = useState(false);
+
+    useEffect(() => {
+        if (!isExpanded) {
+            setClear(false);
+        } else {
+            setTimeout(() => {
+                setClear(true);
+            }, 50);
+        }
+    })
+    
   return (
     <div className="w-[35rem] mb-20 h-[25rem]">
       <div
         ref={targetRef}
-        className={`w-[35rem] h-[25rem] mb-10 ${isExpanded ? 'opacity-0' : 'opacity-100'} overflow-hidden bg-gradient-to-b from-[#ffffff] to-[#CCF9FF] via-[#CCF9FF] hover:bg-gray-100 group`}
+        className={`w-[35rem] h-[25rem] mb-10 ${clear ? 'opacity-0' : 'opacity-100'} overflow-hidden bg-gradient-to-b from-[#ffffff] to-[#CCF9FF] via-[#CCF9FF] hover:bg-gray-100 group`}
         onClick={onExpand}
       >
         <div className="pl-10">
