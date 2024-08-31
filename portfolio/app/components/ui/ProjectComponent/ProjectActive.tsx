@@ -130,7 +130,7 @@ function ProjectActive({
                   <img
                     key={index}
                     src={img}
-                    className="w-auto h-5 grayscale"
+                    className="w-auto h-5 "
                     alt="tech"
                   />
                 ))}

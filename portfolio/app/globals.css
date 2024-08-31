@@ -10,6 +10,10 @@
   user-select: none;
 }
 
+.black-cursor {
+  cursor: url('/mouse-pointer-black.png') 16 16, auto;
+}
+
 .grad {
   background: linear-gradient(to bottom, #2a2a2a , #151515, #151515 );
 }

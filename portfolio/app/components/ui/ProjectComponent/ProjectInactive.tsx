@@ -23,9 +23,9 @@ function ProjectInactive({ demo, logo, width, tech, onExpand, isExpanded, target
             }, 50);
         }
     })
-    
+
   return (
-    <div className="w-[35rem] mb-20 h-[25rem]">
+    <div className="w-[35rem] black-cursor mb-20 h-[25rem]">
       <div
         ref={targetRef}
         className={`w-[35rem] h-[25rem] mb-10 ${clear ? 'opacity-0' : 'opacity-100'} overflow-hidden bg-gradient-to-b from-[#ffffff] to-[#CCF9FF] via-[#CCF9FF] hover:bg-gray-100 group`}
