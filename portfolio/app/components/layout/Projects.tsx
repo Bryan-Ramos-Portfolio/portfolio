@@ -1,4 +1,4 @@
-import Project from "../ui/Project"
+import Project from "../ui/ProjectComponent/Project"
 
 const projects = [
     {

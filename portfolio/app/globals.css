@@ -79,7 +79,10 @@ p {
   
 
 .blue-grad {
-    background: linear-gradient(to bottom, #f6fbfc, #CCF9FF, #CCF9FF);
+    background: linear-gradient(to bottom, #fdfdfd, #CCF9FF, #CCF9FF);
     transition: background 0.3s ease;
 }
 
+.no-scroll {
+    overflow: hidden;
+  }
