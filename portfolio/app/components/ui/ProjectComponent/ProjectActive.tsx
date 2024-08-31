@@ -27,7 +27,7 @@ function ProjectActive({ demo, logo, width, tech, isExpanded, position, onCollap
 
   return (
     <div
-      className={`fixed z-[95] mb-10 transition-all duration-500 ease overflow-hidden bg-gradient-to-b from-[#ffffff] to-[#CCF9FF] via-[#CCF9FF] hover:bg-gray-100 group ${
+      className={`fixed z-[95] mb-10 transition-all duration-[400ms] ease overflow-hidden bg-gradient-to-b from-[#ffffff] to-[#CCF9FF] via-[#CCF9FF] hover:bg-gray-100 group ${
         isExpanded ? 'w-screen h-screen' : 'w-[35rem] h-[25rem]'
       }`}
       onClick={onCollapse}
@@ -48,7 +48,7 @@ function ProjectActive({ demo, logo, width, tech, isExpanded, position, onCollap
       
       }}
     >
-      <div className={`pl-10 transition-all duration-[500ms] ${isExpanded ? 'translate-y-[-50rem]' : 'invisible'}`}>
+      <div className={`pl-10 transition-all duration-[400ms] ${isExpanded ? 'translate-y-[-50rem]' : 'invisible'}`}>
         <img
           className="pt-[4rem]"
           style={{ width: `${width}rem` }}
@@ -67,7 +67,7 @@ function ProjectActive({ demo, logo, width, tech, isExpanded, position, onCollap
         </div>
       </div>
       <img
-        className={`w-[30rem] mt-[3rem] m-auto transition-all duration-500 ${isExpanded? 'group-hover:mt-[2rem]' : 'invisible'}`}
+        className={`w-[30rem] mt-[3rem] m-auto transition-all duration-[400ms] ${isExpanded? 'group-hover:mt-[2rem]' : 'invisible'}`}
         src={demo}
         alt="demo"
       />

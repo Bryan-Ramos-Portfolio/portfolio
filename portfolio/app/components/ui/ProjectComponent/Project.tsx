@@ -39,7 +39,7 @@ function Project({ demo, logo, width, tech }: ProjectProps) {
       setIsTransitioning(true);
       const timeoutId = setTimeout(() => {
         setIsTransitioning(false);
-      }, 500); // Adjust the delay to match your animation duration
+      }, 400); // Adjust the delay to match your animation duration
   
       return () => clearTimeout(timeoutId); // Cleanup timeout if component unmounts or state changes
     } else {
