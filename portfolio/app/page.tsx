@@ -6,7 +6,7 @@ import Projects from "./components/layout/Projects";
 
 export default function Home() {
   return (
-    <div className="bg-[#151515] h-full  ">
+    <div className="bg-[#151515]  h-full  ">
       <Nav />
 
       <section className=" grad  m-auto">

@@ -1,7 +1,7 @@
-'use client'
-import { useState, useEffect, useRef } from 'react';
-import ProjectInactive from './ProjectInactive';
-import ProjectActive from './ProjectActive';
+"use client";
+import { useState, useEffect, useRef } from "react";
+import ProjectInactive from "./ProjectInactive";
+import ProjectActive from "./ProjectActive";
 
 interface ProjectProps {
   demo: string;
@@ -11,9 +11,19 @@ interface ProjectProps {
   title: string;
   body: string[];
   techimgs: string[];
+  pics: string[];
 }
 
-function Project({ demo, logo, width, tech, title, body, techimgs }: ProjectProps) {
+function Project({
+  demo,
+  logo,
+  width,
+  tech,
+  title,
+  body,
+  techimgs,
+  pics,
+}: ProjectProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const targetRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ top: 0, left: 0 });
@@ -25,17 +35,17 @@ function Project({ demo, logo, width, tech, title, body, techimgs }: ProjectProp
       setPosition({ top: rect.top, left: rect.left });
     }
   };
-  
+
   useEffect(() => {
     updatePosition();
-    window.addEventListener('scroll', updatePosition);
-    window.addEventListener('resize', updatePosition);
+    window.addEventListener("scroll", updatePosition);
+    window.addEventListener("resize", updatePosition);
     return () => {
-      window.removeEventListener('scroll', updatePosition);
-      window.removeEventListener('resize', updatePosition);
+      window.removeEventListener("scroll", updatePosition);
+      window.removeEventListener("resize", updatePosition);
     };
   }, [isTransitioning]); // Dependency on isTransitioning
-  
+
   useEffect(() => {
     if (!isExpanded) {
       // When collapsing, set transitioning to true and delay position update
@@ -43,7 +53,7 @@ function Project({ demo, logo, width, tech, title, body, techimgs }: ProjectProp
       const timeoutId = setTimeout(() => {
         setIsTransitioning(false);
       }, 500); // Adjust the delay to match your animation duration
-  
+
       return () => clearTimeout(timeoutId); // Cleanup timeout if component unmounts or state changes
     } else {
       setIsTransitioning(true);
@@ -62,6 +72,7 @@ function Project({ demo, logo, width, tech, title, body, techimgs }: ProjectProp
         targetRef={targetRef}
       />
       <ProjectActive
+        pics={pics}
         title={title}
         body={body}
         techimgs={techimgs}

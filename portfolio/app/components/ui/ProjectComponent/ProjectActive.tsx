@@ -1,6 +1,5 @@
 "use client";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import { useState, useEffect } from "react";
 
 interface ProjectActiveProps {
@@ -14,6 +13,7 @@ interface ProjectActiveProps {
   isExpanded: boolean;
   position: { top: number; left: number };
   onCollapse: () => void;
+  pics: string[];
 }
 
 function ProjectActive({
@@ -27,24 +27,19 @@ function ProjectActive({
   body,
   title,
   techimgs,
+  pics,
 }: ProjectActiveProps) {
   const [isVisible, setIsVisible] = useState(isExpanded);
-  const [doFade, setDoFade] = useState(false);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // Animation duration (default: 400ms)
-      easing: "ease",
-      once: true, // Animation easing (default: 'ease')
-    });
-  }, []);
+
+  
   useEffect(() => {
     if (isExpanded) {
       setIsVisible(true); // Make the component visible when expanding
     } else {
       setTimeout(() => {
         setIsVisible(false);
-      }, 100);
+      }, 200);
     }
   }, [isExpanded]);
 
@@ -94,7 +89,8 @@ function ProjectActive({
       </div>
       {isVisible && (
         <div className="m-auto absolute inset-0 flex gap-10   w-[50rem] ">
-          <div className="pt-[5rem]">
+            <div>
+            <div className="pt-[5rem]">
             <div
               className="p-2 w-[45px] h-auto  hover:invert rounded-full duration-300 hover:bg-white flex items-center justify-center "
               onClick={onCollapse}
@@ -146,6 +142,27 @@ function ProjectActive({
             <p className=" animate-fade-in text-black">{body[0]}</p>
             <p className=" animate-fade-in text-black">{body[1]}</p>
           </div>
+          <div className={` ${isExpanded? "animate-slide-in-up" : 'animate-slide-out-down'}`}>
+          <h3 className={` text-black ${logo === '/movies_logo'?  'mt-[10%]' : 'mt-[8%]'} mb-5`}>Images</h3>
+          <div className={`flex gap-10   `}>
+          
+                    {pics?.map((pic, index) => {
+                        return (
+                            <img
+                                key={index}
+                                src={pic}
+                                className="w-[33%] h-[auto] "
+                                alt="pic"
+                            />
+                        );
+                    })}
+                </div>
+             </div>
+         
+                </div>
+
+                
+          
         </div>
       )}
       <img

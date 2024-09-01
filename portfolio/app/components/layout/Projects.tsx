@@ -9,6 +9,7 @@ function Projects() {
       <div className="flex justify-between flex-wrap">
         {projects.map((project, index) => (
           <Project
+          pics={project.pics}
             title={project.title}
             body={project.body}
             techimgs={project.techimgs}

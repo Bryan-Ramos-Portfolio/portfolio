@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 *{
   font-family: "Space Grotesk", sans-serif;
   color: white;
@@ -11,8 +12,9 @@
 }
 
 .black-cursor {
-  cursor: url('/mouse-pointer-black.png') 16 16, auto;
-}
+    cursor: url('/mouse-pointer-black.png') 16 16, auto;
+  }
+
 
 .grad {
   background: linear-gradient(to bottom, #2a2a2a , #151515, #151515 );
@@ -155,3 +157,106 @@ p {
         }
 
     
+        @keyframes slide-in-up {
+            0% {
+              transform: translateY(100%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+          }
+        
+          .animate-slide-in-up {
+            animation: slide-in-up 0.6s ease;
+          }
+
+          @keyframes slide-out-down {
+            0% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+            100% {
+              transform: translateY(100%);
+              opacity: 0;
+            }
+          }
+
+            .animate-slide-out-down {
+                animation: slide-out-down 0.6s ease;
+            }
+          @keyframes slide-in-right {
+            0% {
+              transform: translateX(100%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+        
+          .animate-slide-in-right {
+            animation: slide-in-right 0.5s ease;
+          }
+
+          @keyframes slide-in-left {
+            0% {
+              transform: translateX(-100%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+          }
+        
+          .animate-slide-in-left {
+            animation: slide-in-left 0.5s ease;
+          }
+
+          @keyframes slide-out-up {
+            0% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+            100% {
+              transform: translateY(-100%);
+              opacity: 0;
+            }
+          }
+        
+          .animate-slide-out-up {
+            animation: slide-out-up 0.5s ease;
+          }
+
+          @keyframes slide-out-down {
+            0% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+            100% {
+              transform: translateY(100%);
+              opacity: 0;
+            }
+          }
+        
+          .animate-slide-out-down {
+            animation: slide-out-down 0.5s ease;
+          }
+
+          @keyframes slide-out-right {
+            0% {
+              transform: translateX(0);
+              opacity: 1;
+            }
+            100% {
+              transform: translateX(100%);
+              opacity: 0;
+            }
+          }
+        
+          .animate-slide-out-right {
+            animation: slide-out
+        }
