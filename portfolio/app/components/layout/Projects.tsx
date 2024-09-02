@@ -4,7 +4,7 @@ import { projects } from "./data";
 
 function Projects() {
   return (
-    <div>
+    <div className="relative">
       <h2 className="pb-10 z-[95] font-semibold">Projects</h2>
       <div className="flex justify-between flex-wrap">
         {projects.map((project, index) => (
@@ -21,6 +21,13 @@ function Projects() {
           />
         ))}
       </div>
+      <div className="absolute z-[1002] w-full top-[50%] left-[80%] pointer-events-none">
+    <img
+      src="/pattern-rings.png"
+      alt="Background pattern"
+      className="w-[600px] h-auto opacity-25"
+    />
+  </div>
     </div>
   );
 }

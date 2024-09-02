@@ -114,8 +114,8 @@ function ProjectActive({
                 src={logo}
                 alt="logo"
               />
-              <h2 className="text-black text-[2rem] pt-2  w-[50%] font-extrabold">
-                {title}
+              <h2 className="text-black  hover:underline text-[2rem] pt-2  w-[50%] font-extrabold">
+                {title} 
               </h2>
 
               <p className="text-black font-bold text-[0.8rem] pt-10">

@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import { useState, useEffect, useRef } from "react";
 import ProjectInactive from "./ProjectInactive";
 import ProjectActive from "./ProjectActive";
@@ -44,19 +44,17 @@ function Project({
       window.removeEventListener("scroll", updatePosition);
       window.removeEventListener("resize", updatePosition);
     };
-  }, [isTransitioning]); // Dependency on isTransitioning
+  }, [isTransitioning]);
 
   useEffect(() => {
-    if (!isExpanded) {
-      // When collapsing, set transitioning to true and delay position update
+    if (isExpanded) {
+      setIsTransitioning(true);
+    } else {
       setIsTransitioning(true);
       const timeoutId = setTimeout(() => {
         setIsTransitioning(false);
-      }, 500); // Adjust the delay to match your animation duration
-
-      return () => clearTimeout(timeoutId); // Cleanup timeout if component unmounts or state changes
-    } else {
-      setIsTransitioning(true);
+      }, 500);
+      return () => clearTimeout(timeoutId);
     }
   }, [isExpanded]);
 
@@ -64,6 +62,7 @@ function Project({
     <>
       <ProjectInactive
         demo={demo}
+    
         logo={logo}
         width={width}
         tech={tech}
