@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import ProjectInactive from "./ProjectInactive";
 import ProjectActive from "./ProjectActive";
+import ActionButton from "../ActionButton";
 
 interface ProjectProps {
   demo: string;
@@ -59,7 +60,7 @@ function Project({
   }, [isExpanded]);
 
   return (
-    <>
+    <div className='mb-[4rem]'>
       <ProjectInactive
         demo={demo}
     
@@ -83,7 +84,9 @@ function Project({
         position={position}
         onCollapse={() => setIsExpanded(false)}
       />
-    </>
+     
+      
+    </div>
   );
 }
 

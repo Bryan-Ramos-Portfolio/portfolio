@@ -21,7 +21,7 @@ function Projects() {
           />
         ))}
       </div>
-      <div className="absolute z-[1002] w-full top-[50%] left-[80%] pointer-events-none">
+      <div className="absolute z-[1002] w-full top-[85%] left-[80%] pointer-events-none">
     <img
       src="/pattern-rings.png"
       alt="Background pattern"

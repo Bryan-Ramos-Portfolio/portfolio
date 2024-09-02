@@ -86,13 +86,16 @@ function ProjectActive({
             </p>
           ))}
         </div>
+        <div className={`${isExpanded? 'opacity-0' : 'opacity-100'} bg-white duration-300 hover:brightness-100 border absolute mt-12 rounded-full p-[0.7rem]  left-[85%]  top-0 w-[50px] hover:invert`}>   
+        <img className='    ' src='/full.webp'></img>
+        </div>
       </div>
       {isVisible && (
         <div className="m-auto absolute inset-0 flex gap-10   w-[50rem] ">
             <div>
             <div className="pt-[5rem]">
             <div
-              className="p-2 w-[45px] h-auto  hover:invert rounded-full duration-300 hover:bg-white flex items-center justify-center "
+              className="p-2 w-[45px] h-auto   hover:invert rounded-full duration-300 bg-white border flex items-center justify-center "
               onClick={onCollapse}
             >
               <img

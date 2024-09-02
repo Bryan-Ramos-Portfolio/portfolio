@@ -21,7 +21,7 @@ export const projects = [
       ],
       pics: ["/root1.png", "/root2.png", "/root3.png"],
       title:"A social media site that reunites lost family members",
-      body: [" RootLink is committed to bridging the emotional and physical gaps between separated families, offering a secure platform for reconnection and healing.", " To achieve this, we’ve built RootLink using the PERN stack, with TypeScript for robust type checking and Zustand for efficient state management. Tailwind CSS ensures a responsive design, while SocketIO facilitates real-time messaging. A secondary Flask server, powered by Python and Machine Learning, processes profile similarities."]
+      body: [" RootLink is committed to bridging the emotional and physical gaps between separated families, offering a secure platform for reconnection and healing.", " To achieve this, my team and I built RootLink using the PERN stack, with TypeScript for robust type checking and Zustand for efficient state management. Tailwind CSS ensures a responsive design, while SocketIO facilitates real-time messaging. I was also tasked with building secondary Flask server, powered by Python and Machine Learning, processes profile similarities."]
     },
     {
       prefix: "datastream",
@@ -47,7 +47,7 @@ export const projects = [
       techimgs: ["/react.png", "/css.png", "/js.png", "leaflet.png" ],
       pics: ['rent1.png', 'rent2.png', 'rent3.png'],
       title: "A Web-app that vizualizes rental data and trends",
-      body: ["RentShift visualizes rent data over the past few decades on an interactive heatmap, allowing users to explore how rents have changed across New York City. Users can select a range of years to compare rent differences over time, gaining insights into trends and patterns. ", "Built with React and utilizing Leaflet for map visualization, the app offers a seamless and engaging experience. The applicationfeatures a stunning design, ensuring a visually appealing and user-friendly interface that enhances the overall experience."]
+      body: ["RentShift visualizes rent data over the past few decades on an interactive heatmap, allowing users to explore how rents have changed across New York City. Users can select a range of years to compare rent differences over time, gaining insights into trends and patterns. ", "Built with React and utilizing Leaflet for map visualization, the app offers a seamless and engaging experience. The application features a stunning design, ensuring a visually appealing and user-friendly interface that enhances the overall experience."]
   
     },
     {
